@@ -1,0 +1,71 @@
+.sidebar {
+  background: #fff;
+  width: 230px;
+  min-width: 200px;
+  max-width: 280px;
+  border-right: 1px solid #eee;
+  min-height: 100vh;
+  padding: 2rem 1rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.sidebar-header h2 {
+  font-size: 1.36rem;
+  color: #1976d2;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.add-note {
+  background: #ffc107;
+  color: #212121;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.1em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-note:hover {
+  background: #ffd740;
+}
+
+.tags-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.tags-section h3 {
+  margin-bottom: 0.3em;
+  font-size: 1rem;
+  color: #1976d2;
+}
+
+.tag {
+  background: #f7faff;
+  color: #1976d2;
+  border: none;
+  border-radius: 99px;
+  padding: 0.45em 1em;
+  font-size: 0.96em;
+  cursor: pointer;
+  margin-right: 0.25em;
+  transition: background 0.2s, color 0.2s;
+}
+.tag.active, .tag:hover {
+  background: #1976d2;
+  color: #fff;
+}

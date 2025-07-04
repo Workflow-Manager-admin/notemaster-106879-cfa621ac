@@ -1,0 +1,41 @@
+<div class="editor" *ngIf="isEditing; else viewer">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      <span>Title</span>
+      <input type="text" formControlName="title" placeholder="Note title" required />
+    </label>
+    <label>
+      <span>Tags</span>
+      <input type="text" formControlName="tags" placeholder="Comma separated (e.g. work,plan)" />
+    </label>
+    <label class="editor-area">
+      <span>Content</span>
+      <textarea formControlName="content" rows="12" placeholder="Write your note here…" required></textarea>
+    </label>
+    <div class="editor-actions">
+      <button type="submit" [disabled]="form.invalid" class="save-btn">Save</button>
+      <button type="button" (click)="onCancel()" class="cancel-btn">Cancel</button>
+    </div>
+  </form>
+</div>
+<ng-template #viewer>
+  <div class="viewer" *ngIf="note; else noNote">
+    <div class="viewer-header">
+      <div>
+        <h2>{{note?.title}}</h2>
+        <small class="date">Updated {{note?.updatedAt | date:'short'}}</small>
+      </div>
+      <div class="viewer-tags">
+        <span class="tag" *ngFor="let tag of note?.tags">#{{tag}}</span>
+      </div>
+    </div>
+    <div class="viewer-content">
+      <pre>{{note?.content}}</pre>
+    </div>
+  </div>
+  <ng-template #noNote>
+    <div class="empty-state">
+      <p>Select a note or create a new one!</p>
+    </div>
+  </ng-template>
+</ng-template>

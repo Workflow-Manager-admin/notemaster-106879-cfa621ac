@@ -1,0 +1,21 @@
+<aside class="sidebar">
+  <nav>
+    <div class="sidebar-header">
+      <h2>Notes</h2>
+      <button class="add-note" title="Add new note" (click)="onCreateNote()">
+        <span>＋</span> New Note
+      </button>
+    </div>
+    <section class="tags-section">
+      <h3>Tags</h3>
+      <button class="tag" [class.active]="!selectedTag" (click)="clearTag()">All</button>
+      <button
+        class="tag"
+        *ngFor="let tag of tags"
+        [class.active]="selectedTag === tag"
+        (click)="selectTag(tag)">
+        #{{tag}}
+      </button>
+    </section>
+  </nav>
+</aside>

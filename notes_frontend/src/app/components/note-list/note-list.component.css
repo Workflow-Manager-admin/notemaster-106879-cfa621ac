@@ -1,0 +1,95 @@
+.note-list {
+  background: #fafbfc;
+  border-right: 1px solid #eee;
+  width: 320px;
+  min-width: 240px;
+  max-width: 420px;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  box-sizing: border-box;
+}
+
+.search-bar {
+  margin-bottom: 1em;
+}
+.search-bar input {
+  width: 100%;
+  padding: 0.6em;
+  border: 1.2px solid #b7d4ef;
+  border-radius: 8px;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  outline: none;
+  transition: border 0.16s;
+}
+.search-bar input:focus {
+  border: 1.5px solid #1976d2;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.note-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.7em 0.7em 0.7em 0.95em;
+  border-radius: 8px;
+  margin-bottom: 0.25em;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s;
+  border: 1.2px solid transparent;
+}
+.note-item.selected, .note-item:hover {
+  background: #eaf1fd;
+  border-color: #1976d2;
+}
+.note-title {
+  font-weight: 600;
+  font-size: 1.06em;
+  color: #1976d2;
+}
+.note-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.87em;
+  margin-top: 2px;
+  gap: 1.5em;
+}
+.tags {
+  display: flex; gap: 0.3em
+}
+.note-meta .tag {
+  color: #ffc107;
+  background: #fff8e1;
+  border-radius: 4px;
+  margin-right: 0.12em;
+  padding: 2px 7px;
+  font-size: 0.92em;
+}
+.delete-btn {
+  background: none;
+  color: #c12525;
+  border: none;
+  font-size: 1.08em;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.18em 0.46em;
+  border-radius: 5px;
+  transition: background 0.14s;
+}
+.delete-btn:hover {
+  background: #ffeaea;
+}
+.empty {
+  color: #bbb;
+  padding: 1.3em;
+  text-align: center;
+}

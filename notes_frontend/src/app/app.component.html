@@ -1,0 +1,21 @@
+<div class="layout-root">
+  <app-sidebar
+    (tagSelected)="onTagSelected($event)"
+    (createNote)="onShowCreateNote()"
+  ></app-sidebar>
+  <app-note-list
+    [notes]="filteredNotes"
+    [selectedNoteId]="selectedNoteId"
+    (noteSelected)="onNoteSelected($event)"
+    (noteDeleted)="onNoteDeleted($event)"
+    (search)="onSearch($event)"
+  ></app-note-list>
+  <main class="main-panel">
+    <app-note-editor
+      [note]="selectedNoteObj"
+      [isEditing]="isEditing"
+      (save)="onEditorSave($event)"
+      (cancel)="onEditorCancel()"
+    ></app-note-editor>
+  </main>
+</div>

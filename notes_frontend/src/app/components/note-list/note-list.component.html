@@ -1,0 +1,28 @@
+<section class="note-list">
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search notes…"
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="onSearchChange()"
+      aria-label="Search notes"
+    />
+  </div>
+  <ul>
+    <li
+      *ngFor="let note of notes"
+      class="note-item"
+      [class.selected]="selectedNoteId === note.id"
+      (click)="onNoteClick(note.id)"
+    >
+      <div class="note-title">{{ note.title }}</div>
+      <div class="note-meta">
+        <span class="tags" *ngIf="note.tags.length">
+          <span class="tag" *ngFor="let tag of note.tags">#{{tag}}</span>
+        </span>
+        <button class="delete-btn" (click)="onDeleteClick($event, note.id)" title="Delete note">🗑</button>
+      </div>
+    </li>
+    <li *ngIf="!notes.length" class="empty">No notes found.</li>
+  </ul>
+</section>
