@@ -1,0 +1,69 @@
+
+> angular@0.0.0 start
+> ng serve  --no-hmr --disable-host-check --port 3000 --host 0.0.0.0
+
+Warning: Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+The "disableHostCheck" option will not be used because it is not supported by the "@angular-devkit/build-angular:application" builder.
+❯ Building...
+✔ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  34.81 kB | 
+styles.css           | styles           | 719 bytes | 
+
+                     | Initial total    | 125.72 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-RW3LJJWN.mjs   | -                |  35.24 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [2.405 seconds]
+
+▲ [WARNING] NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. [plugin angular-compiler]
+
+    src/app/components/note-editor/note-editor.component.html:25:20:
+      25 │         <h2>{{note?.title}}</h2>
+         ╵                     ~~~~~
+
+  Error occurs in the template of component NoteEditorComponent.
+
+    src/app/components/note-editor/note-editor.component.ts:8:15:
+      8 │   templateUrl: './note-editor.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. [plugin angular-compiler]
+
+    src/app/components/note-editor/note-editor.component.html:26:44:
+      26 │ ...ll class="date">Updated {{note?.updatedAt | date:'short'}}</small>
+         ╵                                    ~~~~~~~~~
+
+  Error occurs in the template of component NoteEditorComponent.
+
+    src/app/components/note-editor/note-editor.component.ts:8:15:
+      8 │   templateUrl: './note-editor.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. [plugin angular-compiler]
+
+    src/app/components/note-editor/note-editor.component.html:33:19:
+      33 │       <pre>{{note?.content}}</pre>
+         ╵                    ~~~~~~~
+
+  Error occurs in the template of component NoteEditorComponent.
+
+    src/app/components/note-editor/note-editor.component.ts:8:15:
+      8 │   templateUrl: './note-editor.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.17.0.2:3000/
