@@ -22,7 +22,7 @@ chunk-RW3LJJWN.mjs   | -                |  35.24 kB |
 server.mjs           | server           |   1.39 kB | 
 main.server.mjs      | main.server      | 800 bytes | 
 
-Application bundle generation complete. [2.405 seconds]
+Application bundle generation complete. [2.667 seconds]
 
 ▲ [WARNING] NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. [plugin angular-compiler]
 
